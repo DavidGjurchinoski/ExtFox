@@ -1,0 +1,9 @@
+img {
+  height: 160px;
+  max-width: 300px;
+}
+
+button:disabled {
+  background-color: grey;
+  cursor: auto;
+}

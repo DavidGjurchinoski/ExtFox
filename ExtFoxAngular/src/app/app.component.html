@@ -1,0 +1,19 @@
+<div p-color-scheme="light">
+  <div class="Polaris-Page">
+    <header>
+      <div class="topnav">
+        <a routerLinkActive="active" [routerLink]="['/exercise-one']"
+          >Exercise One</a
+        >
+        <a routerLinkActive="active" [routerLink]="['/exercise-two']"
+          >Exercise Two</a
+        >
+        <span id="spanForItemNumberHolder"
+          ><p id="itemNumberHolder">{{ numberOfItemsInCart }}</p></span
+        >
+        <span><i class="fa fa-shopping-cart" id="cartIcon"></i></span>
+      </div>
+    </header>
+    <router-outlet></router-outlet>
+  </div>
+</div>

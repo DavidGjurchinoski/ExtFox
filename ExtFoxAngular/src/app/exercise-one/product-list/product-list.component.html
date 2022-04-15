@@ -1,0 +1,10 @@
+<div p-color-scheme="light">
+  <div class="Polaris-Layout">
+    <app-recipe-item
+      *ngFor="let recipe of listOfRecipes; let i = index"
+      [recipe]="recipe"
+      [index]="i"
+    ></app-recipe-item>
+  </div>
+  <div id="PolarisPortalsContainer"></div>
+</div>

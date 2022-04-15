@@ -1,0 +1,111 @@
+<div
+  class="Polaris-Page-Header Polaris-Page-Header--hasNavigation Polaris-Page-Header--hasActionMenu Polaris-Page-Header--mobileView Polaris-Page-Header--mediumTitle"
+>
+  <div class="Polaris-Page-Header__Row">
+    <div class="Polaris-Page-Header__TitleWrapper">
+      <div class="Polaris-Header-Title__TitleWithMetadataWrapper">
+        <h1
+          class="Polaris-Header-Title Polaris-Header-Title__TitleWithSubtitle"
+        >
+          List of Recipes
+        </h1>
+      </div>
+      <div
+        class="Polaris-Header-Title__SubTitle Polaris-Header-Title__SubtitleCompact"
+      >
+        <p>Collection of card recipes</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <app-product-list></app-product-list>
+</div>
+<div>
+  <br />
+  <div class="Polaris-ButtonGroup">
+    <div class="Polaris-ButtonGroup__Item">
+      <button class="Polaris-Button" type="button" (click)="callUserAPI()">
+        <span class="Polaris-Button__Content"
+          ><span class="Polaris-Button__Text">Call User API</span></span
+        >
+      </button>
+    </div>
+    <div class="Polaris-ButtonGroup__Item">
+      <button
+        class="Polaris-Button Polaris-Button--primary"
+        type="button"
+        *ngIf="toggler"
+        (click)="addRecipe()"
+      >
+        <span class="Polaris-Button__Content"
+          ><span class="Polaris-Button__Text">Add Recipe</span></span
+        >
+      </button>
+    </div>
+  </div>
+  <br />
+</div>
+<div class="Polaris-DataTable" *ngIf="users.length > 0">
+  <div class="Polaris-DataTable__ScrollContainer">
+    <table class="Polaris-DataTable__Table">
+      <thead>
+        <tr>
+          <th
+            data-polaris-header-cell="true"
+            class="Polaris-DataTable__Cell Polaris-DataTable__Cell--verticalAlignTop Polaris-DataTable__Cell--header"
+            scope="col"
+          >
+            Id
+          </th>
+          <th
+            data-polaris-header-cell="true"
+            class="Polaris-DataTable__Cell Polaris-DataTable__Cell--verticalAlignTop Polaris-DataTable__Cell--header Polaris-DataTable__Cell--numeric"
+            scope="col"
+          >
+            First Name
+          </th>
+          <th
+            data-polaris-header-cell="true"
+            class="Polaris-DataTable__Cell Polaris-DataTable__Cell--verticalAlignTop Polaris-DataTable__Cell--header Polaris-DataTable__Cell--numeric"
+            scope="col"
+          >
+            Last Name
+          </th>
+          <th
+            data-polaris-header-cell="true"
+            class="Polaris-DataTable__Cell Polaris-DataTable__Cell--verticalAlignTop Polaris-DataTable__Cell--header Polaris-DataTable__Cell--numeric"
+            scope="col"
+          >
+            E-mail
+          </th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let user of users">
+        <tr class="Polaris-DataTable__TableRow Polaris-DataTable--hoverable">
+          <th
+            class="Polaris-DataTable__Cell Polaris-DataTable__Cell--verticalAlignTop"
+            scope="row"
+          >
+            {{ user.id }}
+          </th>
+          <td
+            class="Polaris-DataTable__Cell Polaris-DataTable__Cell--verticalAlignTop Polaris-DataTable__Cell--numeric"
+          >
+            {{ user.first_name }}
+          </td>
+          <td
+            class="Polaris-DataTable__Cell Polaris-DataTable__Cell--verticalAlignTop Polaris-DataTable__Cell--numeric"
+          >
+            {{ user.last_name }}
+          </td>
+          <td
+            class="Polaris-DataTable__Cell Polaris-DataTable__Cell--verticalAlignTop Polaris-DataTable__Cell--numeric"
+          >
+            {{ user.email }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

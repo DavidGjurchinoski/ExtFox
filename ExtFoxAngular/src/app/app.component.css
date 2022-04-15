@@ -1,0 +1,55 @@
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+#cartIcon {
+  font-size: 45px;
+  color: orange;
+  padding-right: 5px;
+  position: fixed;
+  right: 60px;
+}
+
+#spanForItemNumberHolder {
+  text-align: center;
+  position: fixed;
+  right: 30px;
+}
+
+#itemNumberHolder {
+  border-radius: 50%;
+  background-color: green;
+  color: white;
+  width: 25px;
+  height: 25px;
+  font-size: 20px;
+  font-weight: bolder;
+  float: right;
+  margin-right: 5px;
+}
+
+#cartHolder {
+  background-color: black;
+  width: 100px;
+  height: 50px;
+}
